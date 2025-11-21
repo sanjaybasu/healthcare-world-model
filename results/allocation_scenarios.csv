@@ -1,0 +1,4 @@
+,total_unmet,max_unmet,gini,cost
+Proportional (Baseline),1708.0,127.0,0.5833255269320843,900000.0
+Priority-Based (World Model),1691.0,115.0,0.5971496156120639,1000000.0
+Equity-Focused,1688.0,88.0,0.5559241706161138,1000000.0

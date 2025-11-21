@@ -1,0 +1,5 @@
+Model,AUC,Brier,Type
+LACE,0.9951328851490352,0.052324634765501726,Clinical Score
+Logistic Regression,1.0,1.3456083618029135e-05,Statistical
+XGBoost,1.0,5.940154801959564e-14,Machine Learning
+World Model,1.0,9.420181316246843e-12,World Model (Enhanced)

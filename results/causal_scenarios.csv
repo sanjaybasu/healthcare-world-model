@@ -1,0 +1,4 @@
+,total_unmet,ate,cost
+No Allocation (Control),1888.0,0.0,0.0
+Uniform Allocation,1888.0,0.0,0.0
+Targeted Allocation (Causal),1699.0,3.78,1000000.0

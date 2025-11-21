@@ -1,0 +1,4 @@
+Model,AUC,Brier,Type
+Improved World Model (Ensemble),0.9275208373715835,0.021585334733440653,World Model
+Logistic Regression (Baseline),0.8172106997480132,0.15345443049587656,Statistical
+XGBoost (Baseline),0.8000348904826516,0.0047065779274136086,Machine Learning

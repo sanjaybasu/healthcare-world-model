@@ -1,0 +1,37 @@
+# Data configuration
+data_sources:
+  california_hcai:
+    url: "https://data.chhs.ca.gov/dataset/emergency-department-volume-and-capacity"
+    format: "csv"
+  cms_provider:
+    url: "https://data.cms.gov/provider-summary-by-type-of-service"
+    format: "csv"
+  county_health_rankings:
+    url: "https://www.countyhealthrankings.org/health-data"
+    format: "csv"
+
+# Model configuration
+world_model:
+  latent_dim: 64
+  hidden_dim: 256
+  num_layers: 3
+  learning_rate: 0.0003
+  batch_size: 32
+  num_epochs: 100
+
+# Simulation configuration
+simulation:
+  num_episodes: 1000
+  episode_length: 365  # days
+  num_ed_beds: 50
+  num_pcp_slots_per_day: 100
+  patient_arrival_rate: 20  # per day
+
+# Experiment configuration
+experiments:
+  random_seed: 42
+  num_runs: 10
+  scenarios:
+    - preventive_pcp_allocation
+    - ed_capacity_management
+    - multiscale_optimization
