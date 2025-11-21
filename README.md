@@ -8,7 +8,6 @@ This repository contains the full implementation of the Recurrent State-Space Mo
 
 > **"A Recurrent World Model Enables Counterfactual Planning for Healthcare Systems"**  
 > Sanjay Basu, MD, PhD  
-> *npj Health Systems* (submitted)
 
 The RSSM learns joint latent representations of individual health trajectories and system-level capacity dynamics, enabling:
 - **Superior prediction** during systemic shocks (13.3pp improvement over ensemble baselines)
@@ -115,23 +114,6 @@ Individual Encoder (Bi-LSTM, hidden=64)
 
 **Total Parameters**: 298,435
 
-## Citation
-
-If you use this code, please cite:
-
-```bibtex
-@article{basu2025healthcare,
-  title={A Recurrent World Model Enables Counterfactual Planning for Healthcare Systems},
-  author={Basu, Sanjay},
-  journal={npj Health Systems},
-  year={2025},
-  note={Submitted}
-}
-```
-
-## License
-
-MIT License - see LICENSE file for details
 
 ## Contact
 
