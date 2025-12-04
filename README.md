@@ -85,33 +85,6 @@ This analysis uses publicly available data:
 - PyTorch 2.0+
 - CUDA 11.8+ (for GPU acceleration)
 
-## Key Results
-
-| Experiment | RSSM | Baseline | Improvement |
-|------------|------|----------|-------------|
-| **COVID-19 Shock Prediction** | MAPE 3.5% | MAPE 16.8% | **13.3 pp** |
-| **Medicaid (High Expansion)** | RMSE 0.519 | RMSE 0.519 | Competitive |
-| **Counterfactual Capability** | ✓ Yes | ✗ No | **Novel** |
-
-### Expected Output
-
-Running `reproduce_results.py` should produce results consistent with the manuscript:
-
-- **COVID-19 MAPE**: ~3.5% (±0.2% due to stochastic training)
-- **Baseline MAPE**: ~16.8%
-- **Medicaid RMSE (High Expansion)**: ~0.519
-- **Medicaid RMSE (Mixed Expansion)**: ~0.765 (demonstrating policy sensitivity)
-
-Key figures will be saved to `results/figures/`. If your results differ substantially, please check:
-1. CUDA/random seed configuration
-2. MEPS data version (2023-2024 release)
-3. Python/PyTorch versions match `requirements.txt`
-
-### Novel Insights
-
-1. **Capacity-Demand Coupling**: Non-linear relationship between system stress and individual utilization (OR 2.3, 95% CI 1.8-2.9)
-2. **Shock Propagation**: Recovery time constant τ = 5.2 months for pandemic-scale shocks
-3. **Intervention Cascades**: Mobile ED units reduce direct visits by 12% and capacity breaches by 18%
 
 ## Model Architecture
 
