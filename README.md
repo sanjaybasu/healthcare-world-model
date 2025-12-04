@@ -7,7 +7,11 @@
 This repository contains the full implementation of the Recurrent State-Space Model (RSSM) for healthcare systems analysis, as described in:
 
 > **"A Recurrent World Model Enables Counterfactual Planning for Healthcare Systems"**  
-> Sanjay Basu, MD, PhD  
+> Sanjay Basu<sup>1,2</sup>, Seth Berkowitz<sup>3</sup>  
+> <sup>1</sup>Department of Medicine, University of California, San Francisco, California, USA  
+> <sup>2</sup>Waymark, San Francisco, California, USA  
+> <sup>3</sup>University of North Carolina at Chapel Hill, Chapel Hill, North Carolina, USA  
+> *Submitted*
 
 The RSSM learns joint latent representations of individual health trajectories and system-level capacity dynamics, enabling:
 - **Superior prediction** during systemic shocks (13.3pp improvement over ensemble baselines)
@@ -89,6 +93,20 @@ This analysis uses publicly available data:
 | **Medicaid (High Expansion)** | RMSE 0.519 | RMSE 0.519 | Competitive |
 | **Counterfactual Capability** | ✓ Yes | ✗ No | **Novel** |
 
+### Expected Output
+
+Running `reproduce_results.py` should produce results consistent with the manuscript:
+
+- **COVID-19 MAPE**: ~3.5% (±0.2% due to stochastic training)
+- **Baseline MAPE**: ~16.8%
+- **Medicaid RMSE (High Expansion)**: ~0.519
+- **Medicaid RMSE (Mixed Expansion)**: ~0.765 (demonstrating policy sensitivity)
+
+Key figures will be saved to `results/figures/`. If your results differ substantially, please check:
+1. CUDA/random seed configuration
+2. MEPS data version (2023-2024 release)
+3. Python/PyTorch versions match `requirements.txt`
+
 ### Novel Insights
 
 1. **Capacity-Demand Coupling**: Non-linear relationship between system stress and individual utilization (OR 2.3, 95% CI 1.8-2.9)
@@ -114,12 +132,31 @@ Individual Encoder (Bi-LSTM, hidden=64)
 
 **Total Parameters**: 298,435
 
+## Citation
+
+If you use this code, please cite:
+
+```bibtex
+@article{basu2025healthcare,
+  title={A Recurrent World Model Enables Counterfactual Planning for Healthcare Systems},
+  author={Basu, Sanjay and Berkowitz, Seth A},
+  journal={Submitted},
+  year={2025}
+}
+```
+
+## License
+
+MIT License - see LICENSE file for details
 
 ## Contact
 
 **Sanjay Basu, MD, PhD**  
-Waymark & University of California, San Francisco  
+Department of Medicine, University of California, San Francisco & Waymark  
 GitHub: [@sanjaybasu](https://github.com/sanjaybasu)
+
+**Seth A Berkowitz, MD, MPH**  
+University of North Carolina at Chapel Hill
 
 ## Acknowledgements
 
